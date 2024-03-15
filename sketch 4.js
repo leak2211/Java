@@ -89,8 +89,8 @@ function draw() {
 
   
 
-  // Рисуем луну с учетом яркости
-  fill(255, 255, 255, moon.brightness); // Цвет луны с учетом яркости
+ 
+  fill(255, 255, 255, moon.brightness); 
   ellipse(moon.x, moon.y, moon.diameter);
 
   fill(70, 200, 0);
@@ -105,21 +105,21 @@ function draw() {
     mountain2.x + mountain2.width, mountain2.y,
     mountain2.x + (mountain2.width / 2), mountain2.y - mountain2.height);
 
-  // Рисуем дерево
-  fill(139, 69, 19); // Коричневый цвет ствола
+  
+  fill(139, 69, 19); 
   rect(tree.x, tree.y, tree.trunkWidth, tree.trunkHeight);
-  fill(34, 139, 34); // Зеленый цвет листвы
+  fill(34, 139, 34); 
   ellipse(tree.x + tree.trunkWidth / 2, tree.y - tree.canopyHeight / 2, tree.canopyWidth, tree.canopyHeight);
 
-  // Делаем сцену темной
-  fill(0, darkness); // Черный цвет с учетом уровня темноты
+  
+  fill(0, darkness); 
   rect(0, 0, width, height);
 
-  // Обновляем значения для яркости луны, позиции солнца и уровня темноты
-  moon.brightness = map(mouseX, 0, width, 0, 255); // Изменяем яркость луны в зависимости от положения мыши
+  
+  moon.brightness = map(mouseX, 0, width, 0, 255); 
   cloudsa.x = map(mouseX, 900, 0, width, 100, 0);
   cloudsb.x = map(mouseX, 930, 0, width, 70, 0);
   cloudsc.x = map(mouseX, 855, 0, width, 130, 0);
-  sun.x = map(mouseX, 0, width, 50, 250); // Изменяем позицию солнца в зависимости от положения мыши
-  darkness = map(mouseX, 0, width, 0, 100); // Изменяем уровень темноты в зависимости от положения мыши
+  sun.x = map(mouseX, 0, width, 50, 250); 
+  darkness = map(mouseX, 0, width, 0, 100); 
 }
